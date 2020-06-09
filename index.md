@@ -1,5 +1,15 @@
 To view my physics final project, please visit [here](https://www.tychos.org/en/scenarios/q5aJiy). The start button is on the bottom. You can modify the slider any time you want.
 
+### Introduction
+You can assign values to many of the variables, such as the mass, force, etc.
+For example:  
+```slab.m = 2```  
+```F_N = [0, slab.m * 9.8]``` (Note that force is a vector quantity)
+
+You can then update the values by manipulating each equation after each dt.  
+```slab.v = slab.v + dv``` for updating velocity  
+```slab.pos = slab.pos + slab.v * dt``` for updating position  
+
 ### Guide
 
 For reading comments on my code, please click the wrench in the top left corner and navigate the Inital State and Calculations tab. I outlined here some of the code that might require more explanation:
