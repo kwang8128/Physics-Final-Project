@@ -12,3 +12,7 @@ to determine the direction of the frictional force, we know that it acts directl
 
 ```drawLine([0, 0], [slab.pos[X] + 10, 0], "brown", 5)```
 this allows us to take the position of the slab, and extend the surface 10 units end so the slab always has a surface to be on
+
+Of course, feel free to change any of the values in the Inital State (such as kinetic/static friction) to experiment what will happen with the slab. You can also slide the slider while the object is moving to "stop" the slab. 
+
+Enjoy!
