@@ -1,37 +1,14 @@
-## Welcome to GitHub Pages
+To view my physics final project, please visit [here](https://www.tychos.org/en/scenarios/q5aJiy).
 
-You can use the [editor on GitHub](https://github.com/kwang8128/Website/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+### Guide
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+For reading comments on my code, please click the wrench in the top left corner and navigate the Inital State and Calculations tab. I outlined here some of the code that might require more explanation:
 
-### Markdown
+```effective = ((F_A[X] > (mu_s * F_N[Y])) * isStationary) or (F_A[X] * (1 - isStationary))```
+```effective``` can either give us 1(true) or 0(false). This code tells us whether the applied force will cause a difference in the motion of the slab. Keep in mind, the applied force has to be greater than the coefficient of static friction * normal force in order to move. After that, as long as the slab is always moving(not stationary, ```(1 - isStationary)```) the applied force is effective.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```netF = F_A * effective + F_f_k * pow(-1, (slab.v[X] > 0)) * (1 - isStationary)```
+to determine the direction of the frictional force, we know that it acts directly opposite of the motion, so -1 can allow us to switch directions at ease. The ```(1 - isStationary)``` allows us to get 0 frictional force if the object is not moving.
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kwang8128/Website/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```drawLine([0, 0], [slab.pos[X] + 10, 0], "brown", 5)```
+this allows us to take the position of the slab, and extend the surface 10 units end so the slab always has a surface to be on
