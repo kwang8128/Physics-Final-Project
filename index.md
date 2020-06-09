@@ -1,4 +1,4 @@
-To view my physics final project, please visit [here](https://www.tychos.org/en/scenarios/q5aJiy).
+To view my physics final project, please visit [here](https://www.tychos.org/en/scenarios/q5aJiy). The start button is on the bottom. You can modify the slider any time you want.
 
 ### Guide
 
